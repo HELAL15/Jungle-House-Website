@@ -22,27 +22,243 @@
 <body>
   <nav id="nav">
     <div class="container ">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-
+      <na class="navbar navbar-expand-lg bg-body-tertiary">
         <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt=""></a>
         <i class="fas fa-bars" id="menu-icon"></i>
         <div class="menu-item hide" id="menu-item">
-          <a href="#" class="active">الرئيسية</a>
+          <a href="index.html" class="active">الرئيسية</a>
           <a href="whoWe.html">من نحن ؟</a>
           <a href="services.html">الخدمات</a>
           <a href="articles.html">المقالات</a>
           <a href="news.html">الأخبار</a>
           <a href="contactUs.html">تواصل معنا</a>
-          <a href="user.html">تسجيل كمستخدم</a>
-          <a href="owner.html">تسجيل كمقدم خدمة</a>
+          <a href="user.html" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">تسجيل
+            كمستخدم</a>
+
+
+          <!-- Scrollable modal -->
+
+          <a class="last" href="" data-bs-target="#exampleModal" data-bs-toggle="modal">تسجيل كمقدم خدمة</a>
+
+
         </div>
+
         <div class="form-check form-switch d-flex align-items-center">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
           <label class="form-check-label" for="flexSwitchCheckChecked">EN</label>
         </div>
+  </nav>
+  </div>
+
+  <!-- user -->
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-container">
+          <div class="modal-header">
+            <span>مرحبًا بك</span>
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">إنشاء حساب جديد</h1>
+          </div>
+          <div class="modal-body">
+            <form class="form" action="">
+              <div class="col-md-12 item">
+                <label for="inputText" class="form-label">اسم المستخدم</label>
+                <input type="text" id="inputText" class="form-control" placeholder="اسم المستخدم يكتب هنا">
+              </div>
+              <div class="col-md-12 item">
+                <label for="inputemail" class="form-label">البريد الالكتروني</label>
+                <input type="email" id="inputemail" class="form-control" placeholder="EX . Sales@domainname.com">
+              </div>
+              <div class="col-md-12 item">
+                <label for="inputpassword" class="form-label">الرقم السري</label>
+                <input type="password" id="inputpassword" class="form-control" placeholder="********">
+              </div>
+              <div class="col-md-12 item">
+                <label for="inputpassword4" class="form-label">تأكيد الرقم السري</label>
+                <input type="password" id="inputpassword4" class="form-control" placeholder="********">
+              </div>
+              <div class="col-md-12 item item-btn">
+                <button class="btn btn-primary btn btn-submit submit " type="submit">دخول</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer footer2">
+            <div class="col-md-12 item">
+              <span>هل لديك حساب ؟ </span>
+              <a class="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">دخول</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-container">
+          <div class="modal-header">
+            <span>مرحبًا بك</span>
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">الدخول إلى ملفك الشخصي</h1>
+          </div>
+          <div class="modal-body">
+            <form class="form" action="">
+              <div class="col-md-12 item">
+                <label for="inputemail2" class="form-label">البريد الالكتروني</label>
+                <input type="email" id="inputemail2" class="form-control" placeholder="EX . Sales@domainname.com">
+              </div>
+              <div class="col-md-12 item">
+                <label for="inputpassword2" class="form-label">الرقم السري</label>
+                <input type="password" id="inputpassword2" class="form-control" placeholder="********">
+              </div>
+              <div class="col-md-12 d-flex justify-content-between forget">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    تذكر بياناتي
+                  </label>
+                </div>
+                <a href="#" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">نسيت كلمة المرور ؟</a>
+              </div>
+              <div class="col-md-12 item item-btn">
+                <button class="btn btn-primary btn btn-submit submit " type="submit">دخول</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer footer2">
+            <div class="col-md-12 item">
+              <span>ليس لديك حساب ؟ </span>
+              <a class="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">سجل الان</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-container">
+          <div class="modal-header">
+            <span>هل نسيت الرقم السري الخاص بك ؟</span>
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">ادخل البريد الإلكتروني الخاص بك وسيتم إرسال كود
+              لاستعادة الرقم السري</h1>
+          </div>
+          <div class="modal-body">
+            <form class="form" action="">
+              <div class="col-md-12 item">
+                <label for="inputemail3" class="form-label">البريد الالكتروني</label>
+                <input type="email" id="inputemail3" class="form-control" placeholder="EX . Sales@domainname.com">
+              </div>
+
+            </form>
+            <div class="col-md-12 item item-btn">
+              <button class="btn btn-primary btn btn-submit submit " type="submit" data-bs-target="#exampleModalToggle4"
+                data-bs-toggle="modal">دخول</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-container">
+          <div class="modal-header">
+            <span>تم إرسال رمز التحقق</span>
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel4">ادخل رمز التحقق المرسل على بريدك الإلكتروني</h1>
+          </div>
+          <div class="modal-body">
+            <div class="col-md-6 codes">
+              <input type="text" class="form-control code" maxlength="1">
+              <input type="text" class="form-control code" maxlength="1">
+              <input type="text" class="form-control code" maxlength="1">
+              <input type="text" class="form-control code" maxlength="1">
+            </div>
+            <div class="col-md-12 item item-btn">
+              <button class="btn btn-primary btn btn-submit submit " type="submit" data-bs-target="#exampleModalToggle5"
+                data-bs-toggle="modal">استمرار</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel5"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-container">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel5">كتابة رقم سري جديد</h1>
+          </div>
+          <div class="modal-body">
+            <form class="form" action="">
+              <div class="col-md-12 item">
+                <label for="inputpassword" class="form-label">الرقم السري</label>
+                <input type="password" id="inputpassword" class="form-control" placeholder="********">
+              </div>
+              <div class="col-md-12 item">
+                <label for="inputpassword4" class="form-label">تأكيد الرقم السري</label>
+                <input type="password" id="inputpassword4" class="form-control" placeholder="********">
+              </div>
+              <div class="col-md-12 item item-btn">
+                <button class="btn btn-primary btn btn-submit submit " type="submit">دخول</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- owner -->
+  <div class="modal fade " id="exampleModal" aria-hidden="true" aria-labelledby="exampleModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-container">
+          <div class="modal-header">
+            <span>مرحبًا بك</span>
+            <h1 class="modal-title fs-5" id="exampleModal">تسجيل كمقدم خدمة</h1>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <form class="form" action="">
+              <div class="col-md-12 item">
+                <label for="inputText0" class="form-label">اسم المستخدم</label>
+                <input type="text" id="inputText0" class="form-control" placeholder="اسم المستخدم يكتب هنا">
+              </div>
+              <div class="col-md-12 item">
+                <label for="inputemail0" class="form-label">البريد الالكتروني</label>
+                <input type="email" id="inputemail0" class="form-control" placeholder="EX . Sales@domainname.com">
+              </div>
+              <div class="col-md-12 item">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>اختر الخدمات الخاصة بك</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="col-md-12 item item-btn">
+                <button class="btn btn-primary btn btn-submit submit " type="submit">دخول</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </nav>
-  </nav>
+
+
   <header>
     <div id="carouselExampleCaptions" class="carousel slide ">
       <div class="carousel-indicators">
@@ -330,7 +546,7 @@
     </div>
   </section>
 
-  <section class="whoWe">
+  <section class="whoWe my-5 py-5">
     <div class="container">
       <div class="row g-5">
         <div class=" col-md-6 text">
@@ -553,8 +769,8 @@
             <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي
               للنص أو شكل توضع الفقرات في الصفحة التي يقرأها</p>
             <div class="more">
-              <a href="#" class="">المزيد</a>
-              <a href="#" class="icon"><i class="fa-solid fa-arrow-left"></i></a>
+              <a href="single-article.html" class="">المزيد</a>
+              <a href="single-article.html" class="icon"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
           </div>
         </div>
@@ -565,8 +781,8 @@
             <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي
               للنص أو شكل توضع الفقرات في الصفحة التي يقرأها</p>
             <div class="more">
-              <a href="#" class="">المزيد</a>
-              <a href="#" class="icon"><i class="fa-solid fa-arrow-left"></i></a>
+              <a href="single-article.html" class="">المزيد</a>
+              <a href="single-article.html" class="icon"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
           </div>
         </div>
@@ -576,8 +792,8 @@
             <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي
               للنص أو شكل توضع الفقرات في الصفحة التي يقرأها</p>
             <div class="more">
-              <a href="#" class="">المزيد</a>
-              <a href="#" class="icon"><i class="fa-solid fa-arrow-left"></i></a>
+              <a href="single-article.html" class="">المزيد</a>
+              <a href="single-article.html" class="icon"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
           </div>
         </div>
@@ -724,24 +940,25 @@
     </div>
   </section>
 
-  <section class="mail my-3 py-5">
-    <div class="container">
-      <i class="fa-regular fa-face-laugh-beam smile1"></i>
-      <i class="fa-regular fa-face-laugh-beam smile2"></i>
-      <div class="heading">
-        <h2>القائمة البريدية</h2>
-        <p>تواصل معنا ليصلك جديدنا</p>
-      </div>
-      <div class="row">
-        <div class="col-md-12 form d-flex justify-content-center align-items-center flex-column">
-          <input type="email" placeholder="البريد الإلكتروني" class="form-control " required>
-          <a href="" class="btn btn-primary text-center ">المزيد</a>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <footer>
+    <section class="mail my-3 py-5">
+      <div class="container">
+        <i class="fa-regular fa-face-laugh-beam smile1"></i>
+        <i class="fa-regular fa-face-laugh-beam smile2"></i>
+        <div class="heading">
+          <h2>القائمة البريدية</h2>
+          <p>تواصل معنا ليصلك جديدنا</p>
+        </div>
+        <div class="row">
+          <div class="col-md-12 form d-flex justify-content-center align-items-center flex-column">
+            <input type="email" placeholder="البريد الإلكتروني" class="form-control " required>
+            <a href="" class="btn btn-primary text-center ">المزيد</a>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="container my-5">
       <div class="row g-4">
         <div class="col-md-3 item1">
@@ -768,17 +985,17 @@
           <h2>روابط أخرى</h2>
           <div class="links">
             <a href="news.html">الأخبار</a>
-            <a href="#">المدونة</a>
-            <a href="#">المعرض</a>
+            <a href="blog.html">المدونة</a>
+            <a href="gallary.html">المعرض</a>
           </div>
         </div>
         <div class="col-md-3 item">
           <h2>روابط المساعدة</h2>
           <div class="links">
-            <a href="#">سياسة الخصوصية</a>
-            <a href="#">الشروط والأحكام</a>
-            <a href="#">الأسئلة الشائعة</a>
-            <a href="#">تواصل معنا</a>
+            <a href="privacy.html">سياسة الخصوصية</a>
+            <a href="rules.html">الشروط والأحكام</a>
+            <a href="faq.html">الأسئلة الشائعة</a>
+            <a href="contactUs.html">تواصل معنا</a>
           </div>
         </div>
       </div>

@@ -7,13 +7,23 @@ menu.addEventListener('click' , ()=>{
   menu_item.classList.toggle('hide');
 });
 
+document.addEventListener('click', (event) => {
+  if (!menu.contains(event.target) && !menu_item.contains(event.target)) {
+    menu_item.classList.add('hide');
+    menu.classList.remove('fa-close');
+  }
+});
+menu_item.addEventListener('click', () => {
+  menu_item.classList.add('hide');
+  menu.classList.remove('fa-close');
+});
 // change background color for nav on scroll
 
 function changeBG() {
   let scroll = window.scrollY;
   let nav = document.getElementById('nav');
-  // Compare the scroll position to 150
-  if (scroll < 200) {
+  // Compare the scroll position to 50
+  if (scroll < 50) {
     nav.classList.remove('bgColor'); // Remove the 'bgColor' class
   } else {
     nav.classList.add('bgColor');    // Add the 'bgColor' class
