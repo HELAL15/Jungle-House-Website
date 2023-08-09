@@ -1371,7 +1371,9 @@ header .carousel .carousel-caption h5{
 header .carousel .carousel-caption p{
   font-size: 20px;
 }
-
+.gallary .nav-pills {
+  width: 50%;
+}
 }
 
 
@@ -1453,6 +1455,9 @@ footer .item1{
 .single-article .card-comment .header {
   margin: 0 1rem;
 }
+.gallary .nav-pills {
+  width: 60%;
+}
 }
 @media (max-width: 425px){
   nav .container a img {
@@ -1520,6 +1525,9 @@ footer .item1{
 }
 .single-article .card-comment .header {
   margin: 0 1rem;
+}
+.gallary .nav-pills {
+  width: 90%;
 }
 }
 
