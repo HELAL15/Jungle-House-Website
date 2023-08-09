@@ -32,6 +32,9 @@ function changeBG() {
 window.addEventListener('scroll', changeBG);
 
 ////////////////////////////// end nav //////////////////////////////////
+
+////////////////////////////// start swiper sections in home page ////////////////////
+
 const Body = document.getElementsByTagName('body')[0];
 let rtlValue = false;
 if (Body.style.direction = 'rlt') {
@@ -81,3 +84,54 @@ $('.owl-carousel').owlCarousel({
   }
 })
 
+////////////////////////////// end swiper sections in home page ////////////////////
+
+///////////////////// start add comment in single-article page /////////////////////
+
+let add_comment = document.getElementById('add-comment');
+
+//check if the send btn in the page or no
+if(add_comment !=null ){
+
+  add_comment.addEventListener('click', function(event) {
+      event.preventDefault(); // to stop reload page when clicking the button
+  
+      let comment = document.getElementById('message').value;
+  
+      // Check if the comment is not empty
+      if (comment.trim() !== "") {
+          // Create new comment
+          let newComment = document.createElement("div");
+          newComment.className = "card card-comment";//add className to comment container
+          newComment.innerHTML = `
+              <div class="header">
+                  <div class="name">
+                      <i class="fa-solid fa-user"></i>
+                      <h2>اسم المستخدم</h2>
+                  </div>
+                  <div class="time">
+                      <i class="fas fa-clock"></i>
+                      <span>منذ لحظات</span>
+                  </div>
+              </div>
+              <div class="comment">
+                  <p>${comment}</p>
+              </div>
+          `;
+  
+          // Append the new comment to the col-md-12
+          let col_md_12 = document.createElement("div");
+          col_md_12.className = "col-md-12";
+          col_md_12.appendChild(newComment);
+  
+          // Append the col-md-12 to the comments container
+          let commentsContainer = document.querySelector(".comments-container");
+          commentsContainer.appendChild(col_md_12);
+  
+          // Clear the textarea after adding the comment
+          document.getElementById("message").value = "";
+      }
+  });
+}
+
+///////////////////// end add comment in single-article page /////////////////////
