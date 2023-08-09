@@ -15,6 +15,8 @@
   <!-- owl carousel css file -->
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <!-- fancybox css file -->
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <!-- main css file -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -52,7 +54,7 @@
 
 
   <section class="gallary my-5">
-    <div class="container">
+    <div class="container d-flex flex-column align-items-center">
       <div class="row heading text-center">
         <h2>المعرض</h2>
       </div>
@@ -71,44 +73,221 @@
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
           tabindex="0">
-          <div class="row gy-3">
-            <div class="col-md-4 ">
-              <div class="row gy-3">
-                <div class="col-md-12">
-                  <img src="images/firsting.png" alt="">
+          <div class="row gy-3 my-4">
+            <div class="col-md-4 d-flex justify-content-center">
+              <div class="row gy-3 one">
+                <div class="col-md-12 photo">
+                  <a id="image1" data-fancybox="gallary" href="images/firsting.png">
+                    <img src="images/firsting.png" alt="">
+                  </a>
                 </div>
-                <div class="col-md-12">
-                  <img src="images/second.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row gy-3">
-                <div class="col-md-12">
-                  <img src="images/nav1.png" alt="">
-                </div>
-                <div class="col-md-12">
-                  <img src="images/nav2.png" alt="">
+                <div class="col-md-12 photo">
+                  <a id="image2" data-fancybox="gallary" href="images/second.png">
+                    <img src="images/second.png" alt="">
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="col-md-2">
-              <img src="images/nav3.png" alt="">
-            </div>
-            <div class="col-md-3">
-              <div class="row gy-3">
-                <div class="col-md-12">
-                  <img src="images/nav4.png" alt="">
+            <div class="col-md-3 d-flex justify-content-center">
+              <div class="row gy-3 one">
+                <div class="col-md-12 photo">
+                  <a id="image3" data-fancybox="gallary" href="images/nav1.png">
+                    <img src="images/nav1.png" alt="">
+                  </a>
                 </div>
-                <div class="col-md-12">
-                  <img src="images/Image 1.png" alt="">
+                <div class="col-md-12 photo">
+                  <a id="image4" data-fancybox="gallary" href="images/nav2.png">
+                    <img src="images/nav2.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center two photo">
+              <a id="image5" data-fancybox="gallary" href="images/nav3.png">
+                <img src="images/nav3.png" alt="">
+              </a>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center">
+              <div class="row gy-3 one">
+                <div class="col-md-12 photo ">
+                  <a id="image6" data-fancybox="gallary" href="images/nav4.png">
+                    <img src="images/nav4.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-12 photo">
+                  <a id="image6" data-fancybox="gallary" href="images/Image 1.png">
+                    <img src="images/Image 1.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+              <div class="row gy-3 one">
+                <div class="col-md-12 photo">
+                  <a id="image7" data-fancybox="gallary" href="images/firsting.png">
+                    <img src="images/firsting.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-12 photo">
+                  <a id="image8" data-fancybox="gallary" href="images/second.png">
+                    <img src="images/second.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center">
+              <div class="row gy-3 one">
+                <div class="col-md-12 photo">
+                  <a id="image9" data-fancybox="gallary" href="images/nav1.png">
+                    <img src="images/nav1.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-12 photo">
+                  <a id="image10" data-fancybox="gallary" href="images/nav2.png">
+                    <img src="images/nav2.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center two photo">
+              <a id="image11" data-fancybox="gallary" href="images/nav3.png">
+                <img src="images/nav3.png" alt="">
+              </a>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center">
+              <div class="row gy-3 one">
+                <div class="col-md-12 photo ">
+                  <a id="image12" data-fancybox="gallary" href="images/nav4.png">
+                    <img src="images/nav4.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-12 photo">
+                  <a id="image13" data-fancybox="gallary" href="images/Image 1.png">
+                    <img src="images/Image 1.png" alt="">
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-          ...</div>
+          <div class="row gy-3 my-4">
+            <div class="col-md-4 d-flex justify-content-center">
+              <div class="row gy-3 one">
+
+                <div class="col-md-12 video">
+
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmarks1.mp4" class="video">
+                    <video src="images/Landmarks1.mp4" muted></video>
+                    <i class="fas fa-play"></i>
+                  </a>
+
+                </div>
+
+                <div class="col-md-12 video">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmark2.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmark2.mp4" muted></video>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center">
+              <div class="row g-3 one ">
+
+                <div class="col-md-12 video">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmarks3.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmarks3.mp4" muted></video>
+                  </a>
+
+                </div>
+                <div class="col-md-12 video">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmarks.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmarks.mp4" muted></video>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center two video2">
+              <a id="image14" data-fancybox="gallary-video" href="images/Landmark2.mp4" class="video">
+                <i class="fas fa-play"></i>
+                <video src="images/Landmark2.mp4" muted></video>
+              </a>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center">
+              <div class="row gy-3 one">
+                <div class="col-md-12 video ">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmarks3.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmarks3.mp4" muted></video>
+                  </a>
+                </div>
+                <div class="col-md-12 video">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmark2.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmark2.mp4" muted></video>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+              <div class="row gy-3 one">
+                <div class="col-md-12 video">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmarks1.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmarks1.mp4" muted></video>
+                  </a>
+                </div>
+                <div class="col-md-12 video">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmark2.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmark2.mp4" muted></video>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center">
+              <div class="row gy-3 one">
+                <div class="col-md-12 video">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmarks3.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmarks3.mp4" muted></video>
+                  </a>
+                </div>
+                <div class="col-md-12 video">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmarks.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmarks.mp4" muted></video>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center two video2">
+              <a id="image14" data-fancybox="gallary-video" href="images/Landmark2.mp4" class="video">
+                <i class="fas fa-play"></i>
+                <video src="images/Landmark2.mp4" muted></video>
+              </a>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center">
+              <div class="row gy-3 one">
+                <div class="col-md-12 video ">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmarks3.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmarks3.mp4" muted></video>
+                  </a>
+                </div>
+                <div class="col-md-12 video">
+                  <a id="image14" data-fancybox="gallary-video" href="images/Landmark2.mp4" class="video">
+                    <i class="fas fa-play"></i>
+                    <video src="images/Landmark2.mp4" muted></video>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- </div> -->
     </div>
@@ -180,6 +359,8 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <!-- owl carousel js file -->
   <script src="js/owl.carousel.min.js"></script>
+  <!-- fancybox js file -->
+  <script src="js/jquery.fancybox.min.js"></script>
   <!-- main js file -->
   <script src="js/main.js"></script>
 </body>
