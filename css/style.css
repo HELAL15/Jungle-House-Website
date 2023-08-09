@@ -1529,6 +1529,13 @@ footer .item1{
 .gallary .nav-pills {
   width: 90%;
 }
+.gallary .video i{
+  top: -400%;
+  right: 46%;
+}
+.gallary .video2 i{
+  top: 38%;
+} 
 }
 
 
