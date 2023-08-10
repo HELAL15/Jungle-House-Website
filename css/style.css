@@ -164,6 +164,11 @@ body{
   border-color: var(--main-color);
   color: var(--main-color);
 }
+.link{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
 /*//////////////////*/
 .navbar {
   --bs-navbar-brand-margin-end: 0rem;
@@ -172,7 +177,7 @@ nav{
   background-color: transparent;
   position: fixed;
   top: 0;left: 0;
-  z-index: 999;
+  z-index: 9997;
   width: 100%;
 }
 nav.bgColor{
@@ -468,7 +473,8 @@ header .header-nav .all{
   font-size:20px;
   width: 85%;
 }
-.services .container .row .img{
+.services .container .row .img ,
+.services-all .container .row .item .img{
   position: relative;
   width: 66px;height: 66px;
   background-color: var(--main-color);
@@ -476,18 +482,21 @@ header .header-nav .all{
   border-radius: 5px 10px 5px 18px;
   transition: .3s;
 }
-.services .container .row .item:hover .img{
+.services .container .row .item:hover .img ,
+.services-all .container .row .item:hover .img{
   background-color: var(--font-heading-color);
 }
-.services .container .row .img img{
+.services .container .row .img img ,
+.services-all .container .row .item .img img{
   width: 70%;
   position: absolute;
   top: -10px;
-  transition: translate(-50%);
+  /* transform: translate(-10%); */
   transition: .3s;
 }
-.services .container .row .item:hover img{
-  right: -3px;
+.services .container .row .item:hover img ,
+.service-all .container .row .item:hover img{
+  right: -4px;
   
 }
 .services .container .row .more{
@@ -500,6 +509,236 @@ header .header-nav .all{
 .services .container .row .item:hover .more{
   opacity: 1;
 }
+/* services-all*/
+.services-all .nav-pills .nav-link{
+  width: 100%;
+}
+.services-all .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: var(--font-heading-color) !important;
+  background-color: transparent;
+  font-weight: bold;
+}
+.services-all .nav-pills .nav-link.active .img{
+  background-color: var(--font-heading-color);
+}
+.services-all .nav-pills .nav-link.active img{
+  right: -4px;
+}
+.services-all{
+  margin-top: 100px;
+}
+.services-all .container .row .item{
+  display: flex !important;
+  justify-content: space-between;
+  text-align: center;
+}
+.services-all .container .row .item h2{
+  font-size: 24px;
+  width: calc(100% - 66px);
+
+}
+.services-all .nav-link {
+  color: var(--main-color);
+}
+.services-all .big-contain{
+  width: 100%;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: -10px -15px 25px #8282821C;
+  border-radius: 17px;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.services-all .big-contain .contain{
+  width: 90%;
+  border-radius: 10px;
+  margin: 2.5rem 5rem;
+}
+.form-check {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.services-all .big-contain .contain label{
+  font-size: 20px;
+  color: var(--main-color);
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+.single-service .contain .checks{
+  margin-right: 2rem;
+}
+.single-service .contain label{
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  /* margin-top: 1rem; */
+}
+.single-service .contain h2{
+  font-size: 24px;
+  font-weight: bolder;
+  color: var(--main-color);
+  margin: 1rem 2rem 1rem 0;
+  padding: .8rem 10px;
+  border-right: 10px solid var(--main-color);
+}
+.form-check .form-check-input {
+  float: right;
+  margin-left: 1em;
+}
+.form-check .form-check-input[type=radio] {
+  border-radius: 0% !important;
+  width: 22px;height: 22px;
+  box-shadow: 0px 3px 6px #00000029;
+  border: none;
+  cursor: pointer;
+}
+.form-check-input:focus {
+  border-color: #0eb5c7;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #07899835;
+}
+.form-check-input:checked {
+  background-color: #07899825;
+  border-color: #06717c;
+}
+.form-check-input:checked[type=radio] {
+  background-image: url('../images/check-mark.png');
+}
+
+.single-service .contain2 .card{
+  border: none;
+  cursor: pointer;
+}
+.single-service .contain2 .card .img{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 22px;
+  transition: .3s;
+}
+.single-service .contain2 .card .img .overlay{
+  position: absolute;
+  bottom: 1%;right: 0;
+  width: 100%;height: 30px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+  z-index: 2;
+  transition: .3s;
+  opacity: 0;
+}
+.single-service .contain2 .card:hover img{
+  filter: brightness(.65);
+}
+.single-service .contain2 .card:hover .overlay{
+  opacity: 1;
+}
+.single-service .contain2 .card .img .overlay i ,
+.serv-details .card .details .fav-comp i{
+  z-index: 222;
+  color:  var(--main-color);
+  font-size: 20px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  padding: .6rem;
+  transition: .3s;
+  cursor: pointer;
+}
+.single-service .contain2 .card .img .overlay i:hover ,
+.serv-details .card .details .fav-comp i:hover{
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+.single-service .contain2 .card .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+.single-service .contain2 .card .title{
+  margin: 1.5rem 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+/*serv-details*/
+
+.serv-details img{
+  width: 100%;
+  max-height: 59%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+.serv-details .card{
+  background-color: #0000000c;
+  border: none;
+}
+.serv-details .card .header h2{
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.serv-details .header ,
+.serv-details .details ,
+.serv-details .price ,
+.serv-details .book{
+  margin: 1rem 2rem;
+}
+.serv-details .header ,
+.serv-details .details ,
+.serv-details .price{
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--main-color);
+}
+.serv-details .card .header .provider i{
+  font-size: 20px;
+  color: var(--main-color);
+  margin-left: .5rem;
+  background-color: var(--p-color);
+  padding: .5rem .6rem;
+  border-radius: 50%;
+}
+.serv-details .card .header .provider a{
+  font-size: 20px;
+  color: var(--main-color);
+  text-decoration: underline !important;
+}
+.serv-details .card .details .stars{
+  color: #FFD700;
+}
+.serv-details .card .details .stars .rank{
+  margin-right: .5rem;
+  color: var(--p-color);
+}
+.serv-details .price h3{
+  font-size: 24px;
+  color: var(--main-color);
+  padding-bottom: .5rem;
+}
+.serv-details .price h3 span{
+  color: var(--p-color);
+  margin-right: .5rem;
+}
+.serv-details .book{
+  background-color: var(--main-color);
+  font-size: 24px;
+  border: none;
+  transition: .3s;
+}
+.serv-details .book:hover{
+  background-color: var(--font-heading-color);
+}
+/**********/
+/**************************************/
 .our-services .nav-link ,
 .gallary .nav-link {
   color: var(--p-color);
@@ -1115,7 +1354,7 @@ footer{
 }
 .mail{
   position: absolute;
-  z-index: 2222;
+  z-index: 222;
   width: 100%;
   top: -45%;
   transform: translate(0%);
@@ -1458,6 +1697,17 @@ footer .item1{
 .gallary .nav-pills {
   width: 60%;
 }
+
+.services-all .big-contain .contain{
+  width: 90%;
+  border-radius: 10px;
+  margin: 2.5rem 2rem;
+}
+
+.services-all .nav-pills li{
+  display: flex;
+  flex-direction: column;
+}
 }
 @media (max-width: 425px){
   nav .container a img {
@@ -1536,6 +1786,12 @@ footer .item1{
 .gallary .video2 i{
   top: 38%;
 } 
+
+.services-all .big-contain .contain{
+  width: 90%;
+  border-radius: 10px;
+  margin: 2.5rem 1rem;
+}
 }
 
 
