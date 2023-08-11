@@ -258,7 +258,7 @@ nav .container .form-switch {
   padding-left: 0 !important;
   cursor: pointer;
   position: absolute;
-  left: 0%;
+  left: 0%;    top: 27%;
   transition: translate(-50%);
 }
 nav .form-switch .form-check-input {
@@ -614,14 +614,16 @@ header .header-nav .all{
   border: none;
   cursor: pointer;
 }
-.single-service .contain2 .card .img{
+.single-service .contain2 .card .img ,
+.serv-details .contain2 .card .img{
   position: relative;
   width: 100%;
   height: 300px;
   border-radius: 22px;
   transition: .3s;
 }
-.single-service .contain2 .card .img .overlay{
+.single-service .contain2 .card .img .overlay ,
+.serv-details .contain2 .card .img .overlay{
   position: absolute;
   bottom: 1%;right: 0;
   width: 100%;height: 30px;
@@ -635,14 +637,17 @@ header .header-nav .all{
   transition: .3s;
   opacity: 0;
 }
-.single-service .contain2 .card:hover img{
+.single-service .contain2 .card:hover img ,
+.serv-details .contain2 .card:hover img{
   filter: brightness(.65);
 }
-.single-service .contain2 .card:hover .overlay{
+.single-service .contain2 .card:hover .overlay ,
+.serv-details .contain2 .card:hover .overlay{
   opacity: 1;
 }
 .single-service .contain2 .card .img .overlay i ,
-.serv-details .card .details .fav-comp i{
+.serv-details .card .details .fav-comp i ,
+.serv-details .contain2 .card .img .overlay i{
   z-index: 222;
   color:  var(--main-color);
   font-size: 20px;
@@ -653,17 +658,20 @@ header .header-nav .all{
   cursor: pointer;
 }
 .single-service .contain2 .card .img .overlay i:hover ,
-.serv-details .card .details .fav-comp i:hover{
+.serv-details .card .details .fav-comp i:hover ,
+.serv-details .contain2 .card .img .overlay i:hover{
   background-color: var(--main-color);
   color: var(--white-color);
 }
-.single-service .contain2 .card .img img{
+.single-service .contain2 .card .img img ,
+.serv-details .contain2 .card .img img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 22px;
 }
-.single-service .contain2 .card .title{
+.single-service .contain2 .card .title ,
+.serv-details .contain2 .card .title{
   margin: 1.5rem 0;
   text-align: center;
   font-size: 24px;
@@ -674,32 +682,34 @@ header .header-nav .all{
 
 .serv-details img{
   width: 100%;
-  max-height: 59%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 22px;
 }
-.serv-details .card{
+.serv-details .card1{
   background-color: #0000000c;
   border: none;
+  border-radius: 22px;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 1rem 0;
 }
-.serv-details .card .header h2{
+.serv-details .card1 .header h2{
   font-size: 28px;
   font-weight: bold;
   color: var(--main-color);
 }
-.serv-details .header ,
-.serv-details .details ,
-.serv-details .price ,
-.serv-details .book{
-  margin: 1rem 2rem;
+.serv-details .card1 .header ,
+.serv-details .card1 .details ,
+.serv-details .card1 .price ,
+.serv-details .card1 .book{
+  margin: .9rem 1rem;
 }
-.serv-details .header ,
-.serv-details .details ,
-.serv-details .price{
-  padding-bottom: 1rem;
+.serv-details .card1 .header ,
+.serv-details .card1 .details ,
+.serv-details .card1 .price{
+  padding-bottom: .9rem;
   border-bottom: 1px solid var(--main-color);
 }
-.serv-details .card .header .provider i{
+.serv-details .card1 .header .provider i{
   font-size: 20px;
   color: var(--main-color);
   margin-left: .5rem;
@@ -707,24 +717,24 @@ header .header-nav .all{
   padding: .5rem .6rem;
   border-radius: 50%;
 }
-.serv-details .card .header .provider a{
+.serv-details .card1 .header .provider a{
   font-size: 20px;
   color: var(--main-color);
   text-decoration: underline !important;
 }
-.serv-details .card .details .stars{
+.serv-details .card1 .details .stars{
   color: #FFD700;
 }
-.serv-details .card .details .stars .rank{
+.serv-details .card1 .details .stars .rank{
   margin-right: .5rem;
   color: var(--p-color);
 }
-.serv-details .price h3{
+.serv-details .card1 .price h3{
   font-size: 24px;
   color: var(--main-color);
   padding-bottom: .5rem;
 }
-.serv-details .price h3 span{
+.serv-details .card1 .price h3 span{
   color: var(--p-color);
   margin-right: .5rem;
 }
@@ -737,7 +747,265 @@ header .header-nav .all{
 .serv-details .book:hover{
   background-color: var(--font-heading-color);
 }
-/**********/
+.serv-details .nav {
+  gap: 7rem;
+}
+.serv-details .nav-link {
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: bold;
+}
+.serv-details .nav-pills .nav-link.active{
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border-radius: 20px;
+}
+.serv-details .navigation-tabs{
+  padding: 2rem 1rem;
+}
+.serv-details .tab-pane{
+  padding: 1rem 0;
+}
+.serv-details .tab-pane p{
+  font-size: 20px;
+  color: var(--p-color);
+}
+.serv-details .header h2{
+  font-size: 24px;
+  color: var(--font-heading-color);
+  font-weight: bold;
+}
+.serv-details .details .stars i{
+  font-size: 20px;
+  color: #FFD700;
+  margin: 1.3rem 0 1.3rem .5rem;
+}
+.serv-details .details .rank{
+  font-size: 20px;
+  color: var(--p-color);
+}
+.serv-details .rate-number{
+  color: var(--p-color);
+  margin: .5rem 0 .5rem .5rem;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center;
+}
+.serv-details .rate-number span{
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: .5rem;
+}
+.serv-details .rate-number h2{
+  font-size: 20px;
+}
+.serv-details .rates .rate{
+  margin: .7rem 0;
+}
+.serv-details .rates .rate .number {
+  color: var(--p-color);
+  font-size: 18px;
+}
+.serv-details .progress{
+  margin: 0 1.5rem;
+}
+.serv-details .progress .progress-bar{
+  background-color: #FFD700;
+}
+.serv-details .rates .rate .percent{
+  color: var(--p-color);
+  font-size: 18px;
+}
+.serv-details .review{
+  position: relative;
+  margin: 4rem 0 2rem 0;
+}
+.serv-details .review::before{
+  content: '';
+  width: 65%;
+  height: 1px;
+  background-color: #078998;
+  position: absolute;
+  top: -11%;
+  left: 63%;
+  transform: translate(-50%,-50%);
+}
+.serv-details .review h2{
+  font-size: 24px;
+  color: var(--font-heading-color);
+  font-weight: bold;
+}
+.serv-details .review p{
+  margin: 1rem 0;
+}
+.serv-details .container .star-widget input {
+  display: none;
+}
+.serv-details .container .star-widget .stars-icon span{
+  font-size: 18px;
+  color: var(--p-color);
+  margin-left: 1rem;
+  font-weight: bold;
+  padding: 20px 0 30px 0;
+}
+.serv-details .star-widget label {
+  font-size: 24px;
+  color: #444;
+  padding: 20px 0 30px 10px;
+  float: right;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.serv-details input:not(:checked)~label:hover,
+.serv-details input:not(:checked)~label:hover~label {
+  color: #FFD700;
+}
+
+.serv-details input:checked~label {
+  color: #FFD700;
+}
+
+.serv-details input#rate-5:checked~label {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+.serv-details .container form {
+  display: block;
+}
+
+.serv-details input:checked~form {
+  display: block;
+}
+.serv-details .review .btn{
+  background-color: var(--main-color);
+  border: none;
+  padding: .5rem 2.5rem;
+  font-size: 20px;
+  transition: .3s;
+  margin: 1rem 0;
+}
+.serv-details .review .btn:hover{
+  background-color: var(--font-heading-color);
+}
+.serv-details .review .textarea{
+  width: 75%;
+}
+.serv-details .review textarea{
+  font-size: 20px;
+  color: var(--p-color);
+  padding: 1rem;
+}
+
+.serv-details .head{
+  color: var(--font-heading-color);
+  font-weight: bold;
+}
+.serv-details .contain2 .card{
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: 0px 0px 0px #00000029;
+}
+
+/******col-md-8*****/
+.serv-details .form-select {
+  padding: 0.375rem 0.5rem 0.375rem 0.75rem;
+  background-position: left 0.75rem center;
+  font-weight: bold;
+  width: 25%;
+}
+.serv-details .comment .commenter-name {
+  margin-bottom: 1.5rem;
+}
+.serv-details .comment .commenter-name i{
+  font-size: 20px;
+  color: var(--main-color);
+  margin-left: .5rem;
+  background-color: var(--p-color);
+  padding: .5rem .6rem;
+  border-radius: 50%;
+}
+.serv-details .comment .card{
+  padding: 1.5rem 1rem 1.5rem .4rem;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--p-color);
+}
+.serv-details .comment .commenter-name a{
+  font-size: 24px;
+  color: var(--main-color);
+}
+.serv-details .comment-rank{
+  margin-bottom: 1rem;
+}
+.serv-details .comment-rank i{
+  color: #FFD700;
+  font-size: 20px;
+}
+/*********/
+/********************/
+/*****booking****/
+.booking .form-select{
+  padding: 0.375rem 0.5rem 0.375rem 0.75rem;
+  background-position: left 0.75rem center;
+  /* font-weight: bold; */
+  /* width: 100%; */
+}
+.booking form .card{
+  border: none;
+  padding: 1.5rem;
+  box-shadow: 0px 3px 6px #00000029;
+  background-color: #00000011;
+}
+.booking form .card .form-control{
+  border: none;
+  font-size: 20px;
+  color: var(--p-color);
+}
+.booking form .card .item{
+  margin: .4rem 0;
+}
+.booking form .card .item label{
+  font-size: 20px;
+  color: var(--main-color);
+  font-weight: bold;
+  margin: 0 .7rem .7rem 0;
+}
+.booking form .card .item .result{
+  margin-top: 10px;
+  padding: .7rem 0;
+  width: 50%;
+}
+.booking form .card .item .result span:first-child{
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: .5rem;
+}
+.booking form .card .item .result span:nth-child(2){
+  color: var(--font-heading-color);
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: .5rem;
+}
+.booking form .card .item .result span:last-child{
+  color: var(--p-color);
+  font-size: 20px;
+  font-weight: bold;
+}
+.booking form .btn{
+  background-color: var(--main-color);
+  border: none;
+  padding: .5rem 2.5rem;
+  font-size: 24px;
+  transition: .3s;
+}
+.booking form .btn:hover{
+  background-color: var(--font-heading-color);
+}
+/*****booking****/
 /**************************************/
 .our-services .nav-link ,
 .gallary .nav-link {
@@ -745,7 +1013,8 @@ header .header-nav .all{
   font-size: 24px;
   position: relative;
 }
-.gallary .nav-link{
+.gallary .nav-link ,
+.serv-details .nav-link{
   font-weight: bold;
 }
 .our-services .nav-pills .nav-link.active ,
@@ -1633,12 +1902,20 @@ header .carousel .carousel-caption p{
     padding: 10px 30px;
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.1);
   }
+  header .carousel .carousel-caption {
+    right: -30%;
+    width: 80%;
+    top: 53%;
+}
+header .carousel .carousel-indicators {
+  position: absolute;
+  top: 60%;
+  right: 0%;
+  transform: rotate(90deg) !important;
+}
   .carousel-item{
     height: 100vh;
   }
-  header .carousel .carousel-caption {
-    right: -22%;
-}
 header .carousel .carousel-caption h5{
   font-size: 24px;
   font-weight: bold;
@@ -1726,7 +2003,15 @@ footer .item1{
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.1);
   }
   header .carousel .carousel-caption {
-    right: -22%;
+    right: -30%;
+    width: 80%;
+    top: 53%;
+}
+header .carousel .carousel-indicators {
+  position: absolute;
+  top: 60%;
+  right: 0%;
+  transform: rotate(90deg) !important;
 }
 header .carousel .carousel-caption h5{
   font-size: 24px;
@@ -1791,6 +2076,28 @@ footer .item1{
   width: 90%;
   border-radius: 10px;
   margin: 2.5rem 1rem;
+}
+.progress{
+  width: 100% !important;
+  margin: .7rem 0;
+}
+.serv-details .review .textarea{
+  width: 100%;
+}
+.form-select {
+  padding: 0.7rem 0.5rem 0.7rem 0.75rem;
+  background-position: left 0.75rem center;
+  font-weight: bold;
+  width: 100%;
+}
+.booking form .card .item .result{
+  width: 100%;
+}
+.serv-details .nav {
+  gap: 1rem;
+}
+.serv-details .form-select {
+  width: 100%;
 }
 }
 

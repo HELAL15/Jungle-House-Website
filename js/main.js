@@ -42,7 +42,7 @@ let add_comment = document.getElementById('add-comment');
 //check if the send btn in the page or no
 if(add_comment !=null ){
 
-  add_comment.addEventListener('click', function(event) {
+  add_comment.addEventListener('click', (event)=> {
       event.preventDefault(); // to stop reload page when clicking the button
   
       let comment = document.getElementById('message').value;
@@ -137,3 +137,108 @@ $('.owl-carousel').owlCarousel({
 })
 
 ////////////////////////////// end swiper sections in home page ////////////////////
+
+let review_btn = document.getElementById('review');
+
+if(review_btn !=null){
+  review_btn.addEventListener('click' , (e)=>{
+    e.preventDefault();
+
+  let preview = document.getElementById('preview').value;
+
+  if (preview.trim() !== "") {
+
+
+    let new_preview = document.createElement('div');
+    new_preview.className = 'card my-4 p-4';
+    new_preview.innerHTML = ` 
+    <div class="commenter-name">
+    <i class="fas fa-user"></i>
+    <a href="#">احمد هلال</a>
+  </div>
+  <div class="comment-rank">
+    <div class="stars-icon d-flex align-items-center">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    </div>
+  </div>
+  <p>${preview}</p> `;
+
+  // Append the col-md-12 to the comments container
+  let previewContainer = document.querySelector(".comment");
+  previewContainer.appendChild(new_preview);
+
+  // Clear the textarea after adding the comment
+  document.getElementById("preview").value = "";
+
+  }
+
+  });
+}
+
+
+
+
+///////////////////////////////////with chat gpt ////////////////////////
+                      // let review_btn = document.getElementById('review');
+
+                      // if (review_btn != null) {
+                      //   review_btn.addEventListener('click', (e) => {
+                      //     e.preventDefault();
+                      
+                      //     let preview = document.getElementById('preview').value;
+                      //     let selectedRate = document.querySelector('input[name="rate"]:checked');
+                      //     let ratingValue = selectedRate ? selectedRate.id.split('-')[1] : null;
+                      
+                      //     if (preview.trim() !== "") {
+                      //       let new_preview = document.createElement('div');
+                      //       new_preview.className = 'card my-4 p-4';
+                      //       new_preview.innerHTML = `
+                      //         <div class="commenter-name">
+                      //           <i class="fas fa-user"></i>
+                      //           <a href="#">احمد هلال</a>
+                      //         </div>
+                      //         <div class="comment-rank">
+                      //           <div class="stars-icon d-flex align-items-center">
+                      //             ${generateStarsHTML(Number(ratingValue))}
+                      //           </div>
+                      //         </div>
+                      //         <p>${preview}</p> `;
+                      
+                      //       // Append the col-md-12 to the comments container
+                      //       let previewContainer = document.querySelector(".comment");
+                      //       previewContainer.appendChild(new_preview);
+                      
+                      //       // Clear the textarea after adding the comment
+                      //       document.getElementById("preview").value = "";
+                      //     }
+                      //   });
+                      // }
+                      
+                      // function generateStarsHTML(rating) {
+                      //   let starsHTML = '';
+                      //   for (let i = 1; i <= 5; i++) {
+                      //     if (i <= rating) {
+                      //       starsHTML += `<label for="rate-${i}" class="fas fa-star active"></label>`;
+                      //     } else {
+                      //       starsHTML += `<label for="rate-${i}" class="fas fa-star"></label>`;
+                      //     }
+                      //   }
+                      //   return starsHTML;
+                      // }
+                      
+
+////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////booking service /////////////////////
+
+let booking_btn = document.getElementById('booking');
+
+if(booking_btn !=null){}
+  booking_btn.addEventListener('click' , (e)=>{
+    e.preventDefault();
+  });

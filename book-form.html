@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jungle House</title>
+  <!-- fav icon -->
+  <link rel="icon" type="image/png" sizes="65x65" href="images/logo-footer.png">
+  <!-- cdn link fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- bootstrap css file -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- owl carousel css file -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <!-- fancybox css file -->
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <!-- main css file -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav id="nav">
+    <div class="container ">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt=""></a>
+        <i class="fas fa-bars" id="menu-icon"></i>
+        <div class="menu-item hide" id="menu-item">
+          <a href="index.html" class="active">الرئيسية</a>
+          <a href="whoWe.html">من نحن ؟</a>
+          <a href="services.html">الخدمات</a>
+          <a href="articles.html">المقالات</a>
+          <a href="news.html">الأخبار</a>
+          <a href="contactUs.html">تواصل معنا</a>
+          <a href="user.html">الملف الشخصي</a>
+        </div>
+        <div class="form-check form-switch d-flex align-items-center">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+          <label class="form-check-label" for="flexSwitchCheckChecked">EN</label>
+        </div>
+    </div>
+  </nav>
+  </nav>
+  <section style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb" class="breadcrumb-main">
+    <div class="overlay"></div>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+      <li class="breadcrumb-item" aria-current="page"><a href="services.html">الخدمات</a></li>
+      <li class="breadcrumb-item active" aria-current="page">اسم الخدمة</li>
+    </ol>
+  </section>
+
+  <section class="booking my-5">
+    <div class="container">
+      <form action="">
+        <div class="card">
+          <div class="row">
+            <div class="col-md-6 item">
+              <label for="main-serv">الخدمة الأساسية</label>
+              <select class="form-select  form-control" aria-label="Default select example" id="main-serv">
+                <option class="w-100" value="1">الخدمات الإدارية</option>
+                <option class="w-100" value="2">الفنون والترفيه والتسلية</option>
+                <option class="w-100" value="3">النقل والتخزين</option>
+                <option class="w-100" value="4">خدمات الإقامة والطعام</option>
+              </select>
+            </div>
+            <div class="col-md-6 item">
+              <label for="sub-serv">الخدمة الفرعية</label>
+              <select class="form-select  form-control" aria-label="Default select example" id="sub-serv">
+                <option class="w-100" value="1">تأجير الدراجات المائية</option>
+                <option class="w-100" value="2">إيجار الدراجات الهوائية</option>
+                <option class="w-100" value="3">تأجير الدراجات النارية والكرفانات</option>
+                <option class="w-100" value="4">
+                  تنظيم رحلات سياحية</option>
+              </select>
+            </div>
+            <div class="col-md-6 item">
+              <label for="from-date">من تاريخ</label>
+              <input type="date" class="form-control" id="from-date">
+            </div>
+            <div class="col-md-6 item">
+              <label for="to-date">إلى تاريخ</label>
+              <input type="date" class="form-control" id="to-date">
+            </div>
+            <div class="col-md-12 item">
+              <label for="time">الساعة</label>
+              <input type="time" class="form-control" id="time">
+            </div>
+            <div class="col-md-6 item">
+              <label for="num-adult">عدد الأفراد</label>
+              <input type="number" class="form-control" id="num-adult">
+            </div>
+            <div class="col-md-6 item">
+              <label for="num-child">عدد الأطفال</label>
+              <input type="number" class="form-control" id="num-child">
+            </div>
+            <div class="col-md-12 item d-flex justify-content-center my-4">
+              <div class="result form-control  d-flex justify-content-center align-items-center flex-wrap">
+                <span>الإجمالي :</span>
+                <span class="amonut-money">225</span>
+                <span>ريال سعودي</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 my-5 d-flex justify-content-center">
+          <button class="btn btn-primary  form-submit w-75" id="booking">حجز</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <section class="mail my-3 py-5">
+      <div class="container">
+        <i class="fa-regular fa-face-laugh-beam smile1"></i>
+        <i class="fa-regular fa-face-laugh-beam smile2"></i>
+        <div class="heading">
+          <h2>القائمة البريدية</h2>
+          <p>تواصل معنا ليصلك جديدنا</p>
+        </div>
+        <div class="row">
+          <div class="col-md-12 form d-flex justify-content-center align-items-center flex-column">
+            <input type="email" placeholder="البريد الإلكتروني" class="form-control " required>
+            <a href="" class="btn btn-primary text-center ">المزيد</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container my-5">
+      <div class="row g-4">
+        <div class="col-md-3 item1">
+          <div class="logo">
+            <a href="index.html"><img src="images/logo-footer.png" alt=""></a>
+          </div>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 item">
+          <h2>خريطة الموقع</h2>
+          <div class="links">
+
+            <a href="index.html">الرئيسية</a>
+            <a href="whoWe.html">من نحن</a>
+            <a href="services.html">الخدمات</a>
+            <a href="offers.html">العروض</a>
+          </div>
+        </div>
+        <div class="col-md-3 item">
+          <h2>روابط أخرى</h2>
+          <div class="links">
+            <a href="news.html">الأخبار</a>
+            <a href="blog.html">المدونة</a>
+            <a href="gallary.html">المعرض</a>
+          </div>
+        </div>
+        <div class="col-md-3 item">
+          <h2>روابط المساعدة</h2>
+          <div class="links">
+            <a href="privacy.html">سياسة الخصوصية</a>
+            <a href="rules.html">الشروط والأحكام</a>
+            <a href="faq.html">الأسئلة الشائعة</a>
+            <a href="contactUs.html">تواصل معنا</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- bootstrap js file -->
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- owl carousel js file -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- fancybox js file -->
+  <script src="js/jquery.fancybox.min.js"></script>
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
