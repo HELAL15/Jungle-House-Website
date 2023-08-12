@@ -28,13 +28,13 @@
         <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt=""></a>
         <i class="fas fa-bars" id="menu-icon"></i>
         <div class="menu-item hide" id="menu-item">
-          <a href="index.html" class="active">الرئيسية</a>
+          <a href="index.html">الرئيسية</a>
           <a href="whoWe.html">من نحن ؟</a>
           <a href="services.html">الخدمات</a>
           <a href="articles.html">المقالات</a>
           <a href="news.html">الأخبار</a>
           <a href="contactUs.html">تواصل معنا</a>
-          <a href="user.html">الملف الشخصي</a>
+          <a href="user.html" class="active">الملف الشخصي</a>
         </div>
         <div class="form-check form-switch d-flex align-items-center">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
@@ -47,10 +47,265 @@
     <div class="overlay"></div>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Library</li>
+      <li class="breadcrumb-item active" aria-current="page">مقدم الخدمة</li>
     </ol>
   </section>
 
+
+  <section class="user-profile my-5 owner-profile ">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-3">
+          <div class="nav flex-column nav-pills d-flex  align-items-center" id="v-pills-tab" role="tablist"
+            aria-orientation="vertical">
+            <div class="profile-photo " id="profile-photo">
+              <img src="images/user.png" alt="" id="photo">
+              <input type="file" class="" accept="image/*" id="file">
+            </div>
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+              type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">نبذة عن مقدم الخدمة</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+              type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">التقييمات</button>
+            <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled"
+              type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false">الخدمات المقدمة</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
+              type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">العروض</button>
+            <a href="index.html" class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>تسجيل خروج</a>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="tab-content" id="v-pills-tabContent">
+
+            <div class="tab-pane fade show active about" id="v-pills-home" role="tabpanel"
+              aria-labelledby="v-pills-home-tab" tabindex="0">
+
+              <div class="card">
+                <h2>نبذة تعريفية عن مقدم الخدمة</h2>
+                <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل
+                  الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها
+                  تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "يقع في قلب سوهو سكوير للاستمتاع بالعروض
+                  الحية والعديد من خيارات تناول والأنشطةهناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                  سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم
+                  استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد هناك حقيقة مثبتة منذ زمن طويل وهي أن
+                  المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في
+                  الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما-
+                  للأحرف عوضاً عن استخدام "يقع في قلب سوهو سكوير للاستمتاع بالعروض الحية والعديد من خيارات تناول
+                  والأنشطةهناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على
+                  الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم
+                  لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "ما- للأحرف عوضاً عن استخدام "</p>
+              </div>
+
+            </div>
+
+
+            <div class="tab-pane fade rate-provider" id="v-pills-profile" role="tabpanel"
+              aria-labelledby="v-pills-profile-tab" tabindex="0">
+
+              <div class=" col-md-12">
+                <div class="row gy-5">
+                  <div class="col-md-3">
+                    <div class="selector ">
+                      <select class="form-select " aria-label="Default select example" id="inputText0">
+                        <option class="w-100" value="1"> أفضل المراجعات</option>
+                        <option class="w-100" value="2">One</option>
+                        <option class="w-100" value="3">Two</option>
+                        <option class="w-100" value="4">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-9 d-flex flex-column align-items-end">
+                    <div class="rate-users text-center ">
+                      <div class="stars d-flex align-items-center text-center">
+                        <h2>مراجعات المستخدمين</h2>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <div class="rank">
+                          <span>4.2</span>
+                          <span>من</span>
+                          <span>5</span>
+                        </div>
+                      </div>
+                      <div class="rate-number d-flex align-items-center text-center">
+                        <span>520</span>
+                        <h2>من التقييمات العالية</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment my-5">
+                  <div class="card ">
+                    <div class="commenter-name">
+                      <i class="fas fa-user"></i>
+                      <a href="#">احمد هلال</a>
+                    </div>
+                    <div class="comment-rank">
+                      <div class="stars-icon d-flex align-items-center">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على
+                      الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم
+                      إيبسوم لأنها تعطي توزيعاَ طبيعياَ </p>
+                  </div>
+                  <div class="card ">
+                    <div class="commenter-name">
+                      <i class="fas fa-user"></i>
+                      <a href="#">احمد هلال</a>
+                    </div>
+                    <div class="comment-rank">
+                      <div class="stars-icon d-flex align-items-center">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على
+                      الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم
+                      إيبسوم لأنها تعطي توزيعاَ طبيعياَ </p>
+                  </div>
+                </div>
+                <div class="review">
+                  <h2>قم بكتابة مراجعة لهذا المنتج</h2>
+                  <p>شارك آراءك مع الآخرين</p>
+                  <div class="star-widget">
+                    <div class="stars-icon d-flex align-items-center">
+                      <span>اختر تقييمك</span>
+                      <input type="radio" name="rate" id="rate-5">
+                      <label for="rate-5" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-4">
+                      <label for="rate-4" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-3">
+                      <label for="rate-3" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-2">
+                      <label for="rate-2" class="fas fa-star"></label>
+                      <input type="radio" name="rate" id="rate-1">
+                      <label for="rate-1" class="fas fa-star"></label>
+                    </div>
+                    <form action="#">
+                      <div class="textarea ">
+                        <textarea cols="10" rows="5" placeholder="شارك رأيك معنا....." class="form-control w-100"
+                          id="preview"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary" id="review">إرسال</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
+              tabindex="0">
+              <div class="heading">
+                <h2>المفضلة</h2>
+              </div>
+              <div class="favourite single-service">
+                <div class="contain2 row">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                      <a class="link" href="service-details.html"></a>
+                      <div class="img">
+                        <img src="images/first.png" alt="">
+                        <div class="overlay">
+                          <i class="fas fa-heart add-fav"></i>
+                          <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <h2>تأجير دراجة</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                      <a class="link" href="service-details.html"></a>
+                      <div class="img">
+                        <img src="images/first.png" alt="">
+                        <div class="overlay">
+                          <i class="fas fa-heart add-fav"></i>
+                          <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <h2>تأجير دراجة</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                      <a class="link" href="service-details.html"></a>
+                      <div class="img">
+                        <img src="images/first.png" alt="">
+                        <div class="overlay">
+                          <i class="fas fa-heart add-fav"></i>
+                          <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <h2>تأجير دراجة</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+              tabindex="0">
+
+              <div class="col-lg-9 contain2 best">
+                <div class="row justify-content-center">
+                  <div class=" col-md-6  cont">
+                    <div class="card">
+                      <a class="link" href="service-details.html"></a>
+                      <div class="caption">
+                        <h2>اسم العرض</h2>
+                        <h4>2500 <span>ريال سعودي</span></h4>
+                        <div class="time">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <span>28</span>
+                          <span>يوم إقامة</span>
+                        </div>
+                      </div>
+                      <div class="rate">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" col-md-6  cont">
+                    <div class="card">
+                      <a class="link" href="service-details.html"></a>
+                      <div class="caption">
+                        <h2>اسم العرض</h2>
+                        <h4>2500 <span>ريال سعودي</span></h4>
+                        <div class="time">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <span>28</span>
+                          <span>يوم إقامة</span>
+                        </div>
+                      </div>
+                      <div class="rate">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <section class="mail my-3 py-5">

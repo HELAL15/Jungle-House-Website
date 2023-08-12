@@ -21,10 +21,11 @@ menu_item.addEventListener('click', () => {
 
 function changeBG() {
   let scroll = window.scrollY;
-  console.log(scroll)
+  let isNavTop = scroll < 50;
+  // console.log(scroll)
   let nav = document.getElementById('nav');
   // Compare the scroll position to 50
-  if (scroll < 50) {
+  if ( isNavTop) {
     nav.classList.remove('bgColor'); // Remove the 'bgColor' class
   } else {
     nav.classList.add('bgColor');    // Add the 'bgColor' class
@@ -99,7 +100,7 @@ $('.owl-carousel.partners').owlCarousel({
   margin:10,
   nav:false,
   dots: false,
-  autoplay:false,
+  autoplay:true,
   autoplayTimeout:3500,
   responsive:{
       0:{
@@ -146,99 +147,107 @@ if(review_btn !=null){
 
   let preview = document.getElementById('preview').value;
 
-  if (preview.trim() !== "") {
-
-
-    let new_preview = document.createElement('div');
-    new_preview.className = 'card my-4 p-4';
-    new_preview.innerHTML = ` 
-    <div class="commenter-name">
-    <i class="fas fa-user"></i>
-    <a href="#">احمد هلال</a>
-  </div>
-  <div class="comment-rank">
-    <div class="stars-icon d-flex align-items-center">
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    </div>
-  </div>
-  <p>${preview}</p> `;
-
-  // Append the col-md-12 to the comments container
-  let previewContainer = document.querySelector(".comment");
-  previewContainer.appendChild(new_preview);
-
-  // Clear the textarea after adding the comment
-  document.getElementById("preview").value = "";
-
-  }
-
+    if (preview.trim() !== "") {
+      let new_preview = document.createElement('div');
+      new_preview.className = 'card my-4 p-4';
+      new_preview.innerHTML = ` 
+          <div class="commenter-name">
+          <i class="fas fa-user"></i>
+          <a href="#">احمد هلال</a>
+        </div>
+        <div class="comment-rank">
+          <div class="stars-icon d-flex align-items-center">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <p>${preview}</p> `;
+    // Append the col-md-12 to the comments container
+    let previewContainer = document.querySelector(".comment");
+    previewContainer.appendChild(new_preview);
+    // Clear the textarea after adding the comment
+    document.getElementById("preview").value = "";
+    }
   });
 }
-
-
-
-
-///////////////////////////////////with chat gpt ////////////////////////
-                      // let review_btn = document.getElementById('review');
-
-                      // if (review_btn != null) {
-                      //   review_btn.addEventListener('click', (e) => {
-                      //     e.preventDefault();
-                      
-                      //     let preview = document.getElementById('preview').value;
-                      //     let selectedRate = document.querySelector('input[name="rate"]:checked');
-                      //     let ratingValue = selectedRate ? selectedRate.id.split('-')[1] : null;
-                      
-                      //     if (preview.trim() !== "") {
-                      //       let new_preview = document.createElement('div');
-                      //       new_preview.className = 'card my-4 p-4';
-                      //       new_preview.innerHTML = `
-                      //         <div class="commenter-name">
-                      //           <i class="fas fa-user"></i>
-                      //           <a href="#">احمد هلال</a>
-                      //         </div>
-                      //         <div class="comment-rank">
-                      //           <div class="stars-icon d-flex align-items-center">
-                      //             ${generateStarsHTML(Number(ratingValue))}
-                      //           </div>
-                      //         </div>
-                      //         <p>${preview}</p> `;
-                      
-                      //       // Append the col-md-12 to the comments container
-                      //       let previewContainer = document.querySelector(".comment");
-                      //       previewContainer.appendChild(new_preview);
-                      
-                      //       // Clear the textarea after adding the comment
-                      //       document.getElementById("preview").value = "";
-                      //     }
-                      //   });
-                      // }
-                      
-                      // function generateStarsHTML(rating) {
-                      //   let starsHTML = '';
-                      //   for (let i = 1; i <= 5; i++) {
-                      //     if (i <= rating) {
-                      //       starsHTML += `<label for="rate-${i}" class="fas fa-star active"></label>`;
-                      //     } else {
-                      //       starsHTML += `<label for="rate-${i}" class="fas fa-star"></label>`;
-                      //     }
-                      //   }
-                      //   return starsHTML;
-                      // }
-                      
-
-////////////////////////////////////////////////////////////////////////
 
 
 //////////////////////////////booking service /////////////////////
 
 let booking_btn = document.getElementById('booking');
 
-if(booking_btn !=null){}
+if(booking_btn !=null){
   booking_btn.addEventListener('click' , (e)=>{
     e.preventDefault();
   });
+}
+
+
+//////////////////////////////end booking service /////////////////////
+
+
+////////////////////// profile photo change ///////////////////////////
+
+let profile_photo = document.getElementById('profile-photo');
+let photo = document.getElementById('photo');
+let file = document.getElementById('file');
+
+if( file !=null){
+  file.onchange = ()=>{
+    let choosedFile = file.files[0];
+    if(choosedFile){
+      let reader = new FileReader();
+      reader.onload = ()=>{
+        photo.setAttribute('src' , reader.result);
+      }
+      reader.readAsDataURL(choosedFile);
+    }
+  }
+}
+
+////////////////////// end profile photo change ///////////////////////////
+
+///////////////////// edit profile-user info //////////////////////////////////////
+
+let edit_main_info = document.getElementById('edit-main-info');
+let password = document.getElementById('edit-password');
+
+if(edit_main_info !=null && password !=null){
+  edit_main_info.addEventListener('click' , (e)=>{
+    e.preventDefault();
+  });
+  password.addEventListener('click' , (e)=>{
+    e.preventDefault();
+  });
+}
+
+//////////////////// end edit profile-user info ///////////////////////////////////
+
+//////////////////// add service to favorite /////////////////////////////////
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  let favoriteIcons = document.querySelectorAll('.add-fav');
+  favoriteIcons.forEach((icon) => {
+    icon.addEventListener('click', () => {
+      icon.classList.toggle('added-to-fav');
+      let card = icon.closest('.card');
+      if (card) {
+        let clonedCard = card.cloneNode(true);
+        // console.log('done');
+        console.log(clonedCard);
+        let father_container = document.querySelector('.user-profile .contain2');
+        let fav_container = document.createElement('div');
+        fav_container.className = 'col-md-6 col-lg-4';
+        fav_container.appendChild(clonedCard);
+        father_container.appendChild(fav_container);
+      }
+    });
+  });
+});
+
+////////////////////////////////////////////////////////////////////////////////////

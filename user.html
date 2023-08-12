@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <!-- main css file -->
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -28,13 +29,13 @@
         <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt=""></a>
         <i class="fas fa-bars" id="menu-icon"></i>
         <div class="menu-item hide" id="menu-item">
-          <a href="index.html" class="active">الرئيسية</a>
+          <a href="index.html">الرئيسية</a>
           <a href="whoWe.html">من نحن ؟</a>
           <a href="services.html">الخدمات</a>
           <a href="articles.html">المقالات</a>
           <a href="news.html">الأخبار</a>
           <a href="contactUs.html">تواصل معنا</a>
-          <a href="user.html">الملف الشخصي</a>
+          <a href="user.html" class="active">الملف الشخصي</a>
         </div>
         <div class="form-check form-switch d-flex align-items-center">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
@@ -47,9 +48,241 @@
     <div class="overlay"></div>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Library</li>
+      <li class="breadcrumb-item active" aria-current="page">الملف الشخصي</li>
     </ol>
   </section>
+
+
+
+  <section class="user-profile my-5">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-3">
+          <div class="nav flex-column nav-pills d-flex  align-items-center" id="v-pills-tab" role="tablist"
+            aria-orientation="vertical">
+            <div class="profile-photo " id="profile-photo">
+              <img src="images/user.png" alt="" id="photo">
+              <input type="file" class="" accept="image/*" id="file">
+            </div>
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+              type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">بياناتي</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+              type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">تعديل كلمة المرور</button>
+            <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled"
+              type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false">المفضلة</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
+              type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">المقارنة</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings"
+              type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">حجوزاتي</button>
+            <a href="index.html" class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>تسجيل خروج</a>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="tab-content" id="v-pills-tabContent">
+
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+              tabindex="0">
+
+              <div class="heading">
+                <h2>المعلومات الشخصية</h2>
+              </div>
+              <form action="">
+                <div class="row g-3">
+                  <div class="col-md-12">
+                    <label for="name" class="form-label name">اسم المستخدم</label>
+                    <input type="text" class="form-control" id="name" placeholder="اسم المستخدم يكتب هنا">
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="email" class="form-label email">البريد الإلكتروني</label>
+                    <input type="email" class="form-control" id="email" placeholder="EX . Sales@domainname.com">
+                  </div>
+                </div>
+                <button class="btn btn-primary" id="edit-main-info">تعديل</button>
+              </form>
+            </div>
+
+
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+              tabindex="0">
+
+              <div class="heading">
+                <h2>تعديل كلمة المرور</h2>
+              </div>
+              <form action="">
+                <div class="row g-3">
+                  <div class="col-md-12">
+                    <label for="recent-password" class="form-label">كلمة المرور الحالية</label>
+                    <input type="password" class="form-control" id="recent-password" placeholder="كلمة المرور الحالية">
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="new-password" class="form-label">كلمة مرور جديدة</label>
+                    <input type="password" class="form-control" id="new-password" placeholder="كلمة مرور جديدة">
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="re-password" class="form-label">تأكيد كلمة المرور</label>
+                    <input type="password" class="form-control" id="re-password" placeholder="تأكيد كلمة المرور">
+                  </div>
+                </div>
+                <button class="btn btn-primary" id="edit-password">تعديل</button>
+              </form>
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
+              tabindex="0">
+              <div class="heading">
+                <h2>المفضلة</h2>
+              </div>
+              <div class="favourite single-service">
+                <div class="contain2 row">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                      <a class="link" href="service-details.html"></a>
+                      <div class="img">
+                        <img src="images/first.png" alt="">
+                        <div class="overlay">
+                          <i class="fas fa-heart add-fav"></i>
+                          <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <h2>تأجير دراجة</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                      <a class="link" href="service-details.html"></a>
+                      <div class="img">
+                        <img src="images/first.png" alt="">
+                        <div class="overlay">
+                          <i class="fas fa-heart add-fav"></i>
+                          <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <h2>تأجير دراجة</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                      <a class="link" href="service-details.html"></a>
+                      <div class="img">
+                        <img src="images/first.png" alt="">
+                        <div class="overlay">
+                          <i class="fas fa-heart add-fav"></i>
+                          <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <h2>تأجير دراجة</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+              tabindex="0">
+
+              <div class="heading">
+                <h2>المقارنة</h2>
+              </div>
+
+              <div class="compare">
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <div class="card">
+                      <h3 class="product-name">اسم المنتج</h3>
+                      <img src="images/first.png" alt="">
+                      <div class="remove">
+                        <button class="btn2"><i class="fa-solid fa-xmark"></i>إزالة من المقارنة</button>
+                      </div>
+                      <div class="rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="price">
+                        <h3> السعر للبالغين :<span>200</span><span>ريال سعودي</span></h3>
+                        <h3> السعر للاطفال :<span>200</span><span>ريال سعودي</span></h3>
+                      </div>
+                      <button class="book btn btn-primary">حجز</button>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card">
+                      <h3 class="product-name">اسم المنتج</h3>
+                      <img src="images/first.png" alt="">
+                      <div class="remove">
+                        <button class="btn2"><i class="fa-solid fa-xmark"></i>إزالة من المقارنة</button>
+                      </div>
+                      <div class="rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="price">
+                        <h3> السعر للبالغين :<span>200</span><span>ريال سعودي</span></h3>
+                        <h3> السعر للاطفال :<span>200</span><span>ريال سعودي</span></h3>
+                      </div>
+                      <button class="book btn btn-primary">حجز</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+              tabindex="0">
+
+              <div class="heading">
+                <h2>الحجوزات</h2>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>صورة الخدمة</th>
+                    <th>اسم الخدمة</th>
+                    <th>تاريخ الطلب</th>
+                    <th>الإجمالي</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="for-img"><img src="images/first.png" class="" alt=""></td>
+                    <td>اسم الخدمة</td>
+                    <td>تاريخ الطلب</td>
+                    <td>الإجمالي</td>
+                  </tr>
+                  <tr>
+                    <td class="for-img"><img src="images/first.png" class="" alt=""></td>
+                    <td>اسم الخدمة</td>
+                    <td>تاريخ الطلب</td>
+                    <td>الإجمالي</td>
+                  </tr>
+                  <tr>
+                    <td class="for-img"><img src="images/first.png" class="" alt=""></td>
+                    <td>اسم الخدمة</td>
+                    <td>تاريخ الطلب</td>
+                    <td>الإجمالي</td>
+                  </tr>
+                  <!-- يمكنك إضافة صفوف إضافية هنا -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
   <footer>

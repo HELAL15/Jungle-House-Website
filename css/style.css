@@ -8,6 +8,20 @@
 body{
   direction: rtl;
 }
+.btn {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  margin: 20px 0;
+  padding: 5px 45px !important;
+  font-size: 24px;
+  text-align: center;
+  border: none;
+  transition: .3s;
+  display: inline !important;
+}
+.btn:hover{
+  background-color: var(--font-heading-color);
+}
 /*scrollbar*/
 ::-webkit-scrollbar{
   width: 12px;
@@ -613,6 +627,7 @@ header .header-nav .all{
 .single-service .contain2 .card{
   border: none;
   cursor: pointer;
+  box-shadow: none;
 }
 .single-service .contain2 .card .img ,
 .serv-details .contain2 .card .img{
@@ -637,6 +652,7 @@ header .header-nav .all{
   transition: .3s;
   opacity: 0;
 }
+
 .single-service .contain2 .card:hover img ,
 .serv-details .contain2 .card:hover img{
   filter: brightness(.65);
@@ -657,12 +673,17 @@ header .header-nav .all{
   transition: .3s;
   cursor: pointer;
 }
-.single-service .contain2 .card .img .overlay i:hover ,
+.added-to-fav{
+  background-color: var(--main-color) !important;
+  color: var(--white-color) !important;
+}
+/* .single-service .contain2 .card .img .overlay i:hover ,
 .serv-details .card .details .fav-comp i:hover ,
 .serv-details .contain2 .card .img .overlay i:hover{
   background-color: var(--main-color);
   color: var(--white-color);
-}
+} */
+
 .single-service .contain2 .card .img img ,
 .serv-details .contain2 .card .img img{
   width: 100%;
@@ -690,10 +711,10 @@ header .header-nav .all{
   border: none;
   border-radius: 22px;
   box-shadow: 0px 3px 6px #00000029;
-  padding: 1rem 0;
+  padding: 1.7rem 0;
 }
 .serv-details .card1 .header h2{
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   color: var(--main-color);
 }
@@ -710,7 +731,7 @@ header .header-nav .all{
   border-bottom: 1px solid var(--main-color);
 }
 .serv-details .card1 .header .provider i{
-  font-size: 20px;
+  font-size: 18px;
   color: var(--main-color);
   margin-left: .5rem;
   background-color: var(--p-color);
@@ -718,19 +739,20 @@ header .header-nav .all{
   border-radius: 50%;
 }
 .serv-details .card1 .header .provider a{
-  font-size: 20px;
+  font-size: 18px;
   color: var(--main-color);
   text-decoration: underline !important;
 }
 .serv-details .card1 .details .stars{
   color: #FFD700;
+  font-size: 18px;
 }
 .serv-details .card1 .details .stars .rank{
   margin-right: .5rem;
   color: var(--p-color);
 }
 .serv-details .card1 .price h3{
-  font-size: 24px;
+  font-size: 22px;
   color: var(--main-color);
   padding-bottom: .5rem;
 }
@@ -776,12 +798,12 @@ header .header-nav .all{
   font-weight: bold;
 }
 .serv-details .details .stars i{
-  font-size: 20px;
+  font-size: 18px;
   color: #FFD700;
-  margin: 1.3rem 0 1.3rem .5rem;
+  margin: 1rem 0 1rem .5rem;
 }
 .serv-details .details .rank{
-  font-size: 20px;
+  font-size: 18px;
   color: var(--p-color);
 }
 .serv-details .rate-number{
@@ -838,17 +860,20 @@ header .header-nav .all{
 .serv-details .review p{
   margin: 1rem 0;
 }
-.serv-details .container .star-widget input {
+.serv-details .container .star-widget input ,
+.owner-profile .container .star-widget input{
   display: none;
 }
-.serv-details .container .star-widget .stars-icon span{
+.serv-details .container .star-widget .stars-icon span ,
+.owner-profile .container .star-widget .stars-icon span{
   font-size: 18px;
   color: var(--p-color);
   margin-left: 1rem;
   font-weight: bold;
   padding: 20px 0 30px 0;
 }
-.serv-details .star-widget label {
+.serv-details .star-widget label ,
+.owner-profile .star-widget label {
   font-size: 24px;
   color: #444;
   padding: 20px 0 30px 10px;
@@ -858,24 +883,30 @@ header .header-nav .all{
 }
 
 .serv-details input:not(:checked)~label:hover,
-.serv-details input:not(:checked)~label:hover~label {
+.serv-details input:not(:checked)~label:hover~label ,
+.owner-profile input:not(:checked)~label:hover,
+.owner-profile input:not(:checked)~label:hover~label {
   color: #FFD700;
 }
 
-.serv-details input:checked~label {
+.serv-details input:checked~label ,
+.owner-profile input:checked~label{
   color: #FFD700;
 }
 
-.serv-details input#rate-5:checked~label {
+.serv-details input#rate-5:checked~label ,
+.owner-profile input#rate-5:checked~label {
   color: #fe7;
   text-shadow: 0 0 20px #952;
 }
 
-.serv-details .container form {
+.serv-details .container form ,
+.owner-profile .container form {
   display: block;
 }
 
-.serv-details input:checked~form {
+.serv-details input:checked~form ,
+.owner-profile input:checked~form  {
   display: block;
 }
 .serv-details .review .btn{
@@ -1296,20 +1327,8 @@ header .header-nav .all{
 .best .text .servay h4 span{
   font-weight: bold;
 }
-.best .text .btn{
-  background-color: var(--font-heading-color);
-  color: var(--white-color);
-  margin: 20px 0;
-  padding: 5px 45px !important;
-  font-size: 24px;
-  text-align: center;
-  border: none;
-  transition: .3s;
-  display: inline !important;
-
-}
-.best .text .btn:hover{
-  background-color: var(--main-color);
+.single-service .best{
+  background-color: transparent;
 }
 .best .cont .card{
   background-image: url('../images/2.png');
@@ -1323,13 +1342,14 @@ header .header-nav .all{
   align-items: center;
   flex-direction: column;
   position: relative;
+  margin-bottom: 3rem;
 }
 .best .cont .caption{
   background: #ffffffa2 0% 0% no-repeat padding-box;
-  width: fit-content;
+  /* width: fit-content; */
   text-align: center;
   border-radius: 22px;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 .best .cont .caption h2{
   font-size: 24px;
@@ -1349,7 +1369,7 @@ header .header-nav .all{
   background-color: var(--main-color);
   border-radius: 50%;
   font-size: 16px;
-  height: 20%;width: 15%;
+  height: 70px;width: 70px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1375,6 +1395,10 @@ header .header-nav .all{
   text-align: center;
   border-radius: 22px;
   overflow: hidden;
+}
+.single-service .card{
+  box-shadow: 0px 0px 6px #00000029;
+  border: none;
 }
 .articles .card img ,
 .single-article .card img ,
@@ -1855,7 +1879,278 @@ footer .item .links a:hover{
   padding: 7px;
   background-color: var(--main-color);
 }
-/************************/
+
+/********* user profile *************/
+
+.user-profile .profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--p-color);
+  margin-bottom: 2rem;
+}
+
+.user-profile .profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-profile .profile-photo input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.user-profile .nav-link{
+  color: var(--p-color);
+  background-color: #00000010;
+  font-size: 20px;
+  font-weight: bold;
+  margin: .7rem 0;
+  width: 100%;
+}
+.user-profile .nav-link.active{
+  color: var(--white-color);
+  background-color: var(--main-color);
+}
+.user-profile .logout{
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  transition: .3s;
+  margin: 20px 0;
+}
+.user-profile .logout i{
+  margin-left: .5rem;
+  transition: .3s;
+}
+.user-profile .logout:hover{
+  color: var(--font-heading-color);
+}
+.user-profile .logout:hover i{
+  margin-left: 1rem;
+}
+.user-profile .tab-pane{
+  padding: 3rem 5rem 2rem 0;
+  width: 100%;
+}
+.user-profile .heading{
+  align-items: start;
+  margin-bottom: 2rem;
+}
+.user-profile  label{
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.user-profile .tab-pane form .row .col-md-12{
+  margin-bottom: 2rem;
+} 
+
+.user-profile .compare .card{
+  border: none;
+  background-color: #0d0d0d0a;
+  border-radius: 22px;
+  padding: 1rem 1rem;
+  margin-bottom: 2rem;
+}
+.user-profile .compare .card h3{
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.user-profile .compare .card img{
+  width: 100%;
+  border-radius: 22px;
+  margin: .5rem 0;
+  height: 200px;
+  object-fit: cover;
+}
+.user-profile .compare .card .remove ,
+.user-profile .compare .card .rate{
+  display: flex;
+  justify-content: center;
+  margin: .5rem 0;
+}
+.user-profile .compare .card .remove .btn2{
+  border: none;outline: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: var(--p-color);
+}
+.user-profile .compare .card .remove .btn2 i{
+  margin-left: .5rem;
+  border: 1px solid var(--p-color);
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.user-profile .compare .card .rate {
+  font-size: 18px;
+  color: #FFD700;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--p-color);
+}
+.user-profile .compare .card .price h3{
+  margin: 1rem 0;
+}
+.user-profile .compare .card .price h3 span:first-child{
+  color: var(--font-heading-color);
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 10px;
+}
+.user-profile .compare .card .price h3 span:last-child{
+  color: var(--p-color);
+}
+
+/* book-user*/
+.table {
+  vertical-align: middle !important;
+  text-align: center;
+}
+.table>:not(caption)>*>* {
+  border-bottom-width: 0px;
+  padding: 1.5rem 0.5rem;
+}
+.table thead{
+  background-color: #0000000c;
+  border-radius: 22px !important;
+  
+}
+.table thead tr th{
+  color: var(--main-color);
+  font-size: 20px;
+}
+.table tbody tr td{
+  color: var(--p-color);
+  font-size: 20px;
+}
+.table tbody tr .for-img{
+  width: 25%;
+}
+.table tbody img{
+  width: 100%;
+  border-radius: 22px;
+}
+/*************************************/
+
+/***************** owner profile ***************/
+
+.owner-profile .about .card{
+  border: none;
+  border-radius: 22px;
+  padding: 4rem 1rem;
+  box-shadow: 0px 0px 15px #00000029 ;
+  text-align: center;
+}
+.owner-profile .about .card h2{
+  font-size: 24px;
+  color: var(--main-color);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.owner-profile .about .card p{
+  font-size: 20px;
+  color: var(--p-color);
+}
+.owner-profile .best {
+  background-color: transparent;
+  width: 100%;
+}
+.owner-profile .rate-provider .form-select {
+  padding: 0.375rem 1rem 0.375rem 0.75rem;
+  background-position: left 0.75rem center;
+}
+.owner-profile .comment .card {
+  padding: 1.5rem 1rem 1.5rem 0.4rem;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--p-color);
+}
+.owner-profile .comment .commenter-name i {
+  font-size: 20px;
+  color: var(--main-color);
+  margin-left: 0.5rem;
+  background-color: var(--p-color);
+  padding: 0.5rem 0.6rem;
+  border-radius: 50%;
+}
+.owner-profile .comment .commenter-name a {
+  font-size: 24px;
+  color: var(--main-color);
+}
+.owner-profile .comment-rank i {
+  color: #FFD700;
+  font-size: 20px;
+  margin: 1rem 0;
+}
+.owner-profile .card p {
+  font-size: 20px;
+  color: var(--p-color);
+}
+.owner-profile .review {
+    position: relative;
+    margin: 4rem 0rem 2rem 0;
+}
+.owner-profile .review h2 {
+  font-size: 24px;
+  color: var(--font-heading-color);
+  font-weight: bold;
+}
+.owner-profile .review p {
+  margin: 1rem 0;
+  color: var(--p-color);
+}
+.owner-profile .container .star-widget .stars-icon span {
+  font-size: 18px;
+  color: var(--p-color);
+  margin-left: 1rem;
+  font-weight: bold;
+  padding: 20px 0 30px 0;
+}
+.owner-profile .rate-users .stars h2{
+  font-size: 20px;
+  color: var(--main-color);
+  margin-left: 1rem;
+}
+.owner-profile .rate-users .stars i{
+  color: #FFD700;
+  font-size: 20px;
+}
+.owner-profile .rate-users .rank{
+  color: var(--p-color);
+  font-size: 20px;
+  text-align: center;
+  margin-right: 1rem;
+}
+.owner-profile .rate-users .rate-number{
+  color: var(--p-color);
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+.owner-profile .rate-users .rate-number span{
+  font-size: 24px;
+}
+.owner-profile .rate-users .rate-number h2{
+  font-size: 20px;
+  font-weight: bold;
+
+}
+/******************************************************/
+
+
+/*********************************************************************************/
 
 
 @media (max-width: 991px) {
@@ -2098,6 +2393,9 @@ footer .item1{
 }
 .serv-details .form-select {
   width: 100%;
+}
+.user-profile .tab-pane{
+  padding: 3rem 0rem 2rem 0;
 }
 }
 
