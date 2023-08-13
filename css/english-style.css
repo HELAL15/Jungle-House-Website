@@ -1,0 +1,80 @@
+body{
+  direction: ltr;
+}
+nav .container .form-switch {
+  padding-right: 0 !important;
+  left: unset;
+  right: 0%;
+}
+header .carousel .carousel-indicators {
+  left: 88%;
+}
+.fa-solid, .fas {
+  transform: rotateY(170deg);
+  margin-left: .5rem;
+}
+.services .container .row .item:hover img {
+  left: -15px;
+}
+.services-all .nav-pills .nav-link.active img {
+  right: 38px;
+}
+.services-all .big-contain {
+  box-shadow: 10px 15px 25px #8282821C;
+}
+.services-all .big-contain .contain label {
+  margin-left: 18px;
+}
+.single-service .contain h2 {
+  margin: 1rem 0rem 1rem 1rem;
+  padding: 0.8rem 20px;
+  border-right: none;
+  border-left: 10px solid var(--main-color);
+}
+.single-service .contain label {
+  margin-left: 18px;
+}
+.whoWe .row .img img {
+  transform: rotateY(180deg);
+}
+.aboutUs .container .row .text .items .item .icon {
+  margin-left: 0;
+  margin-right: 30px;
+}
+.trend .card .kind h3 {
+  padding-right: unset;
+  padding-left: 10px;
+}
+.best .cont .rate {
+  left: 8%;
+  direction: rtl;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  float: left;
+}
+.serv-details .form-select {
+  background-position: right 0.75rem center;
+}
+.booking .form-select {
+  background-position: right 0.75rem center;
+}
+.single-article .info .item:nth-child(n+2) {
+  border-right: none;
+  border-left: 1px solid var(--white-color);
+  padding: 0 2% 0 14%;
+}
+.single-article .card-comment .header .name i {
+  margin-right: 10px;
+}
+.single-article .card-comment .header .time i {
+  margin-right: 5px;
+}
+.user-profile .tab-pane {
+  padding: 3rem 0rem 2rem 5rem;
+}
+.user-profile .logout i {
+  margin-right: 0.5rem;
+}
+.owner-profile .rate-provider .form-select {
+  background-position: right 0.75rem center;
+}

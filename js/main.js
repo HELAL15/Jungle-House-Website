@@ -173,7 +173,7 @@ if(review_btn !=null){
     }
   });
 }
-
+/////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////booking service /////////////////////
 
@@ -185,6 +185,37 @@ if(booking_btn !=null){
   });
 }
 
+    let adultInput = document.getElementById("num-adult");
+    let childInput = document.getElementById("num-child");
+    let resultElement = document.getElementById("result");
+
+  if(adultInput !=null && childInput !=null && resultElement !=null ){
+
+    updateResult();
+
+    adultInput.addEventListener("input", updateResult);
+    childInput.addEventListener("input", updateResult);
+
+    function updateResult() {
+
+      let adult = parseFloat(adultInput.value);
+      let child = parseFloat(childInput.value);
+
+      let adult_price = parseFloat(adultInput.getAttribute("data-price"));
+      let child_price = parseFloat(childInput.getAttribute("data-price"));
+
+      if (!isNaN(adult) && !isNaN(child)) {
+        let equation_adult = adult * adult_price;
+        let equation_child = child * child_price;
+        let equation = equation_adult + equation_child;
+        resultElement.innerText = equation;
+      } else {
+        resultElement.innerText = "";
+      }
+
+    }
+
+  }
 
 //////////////////////////////end booking service /////////////////////
 
@@ -231,23 +262,41 @@ if(edit_main_info !=null && password !=null){
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  
   let favoriteIcons = document.querySelectorAll('.add-fav');
   favoriteIcons.forEach((icon) => {
     icon.addEventListener('click', () => {
       icon.classList.toggle('added-to-fav');
-      let card = icon.closest('.card');
-      if (card) {
-        let clonedCard = card.cloneNode(true);
-        // console.log('done');
-        console.log(clonedCard);
-        let father_container = document.querySelector('.user-profile .contain2');
-        let fav_container = document.createElement('div');
-        fav_container.className = 'col-md-6 col-lg-4';
-        fav_container.appendChild(clonedCard);
-        father_container.appendChild(fav_container);
-      }
     });
   });
+
+  let remove_fav = document.querySelectorAll('.col-favorite i');
+if(remove_fav != null ){
+  remove_fav.forEach((btn)=>{
+    btn.addEventListener('click' , ()=>{
+      btn.parentElement.parentElement.parentElement.remove();
+    });
+  });
+}
+
+
+
+
+  let compareIcons = document.querySelectorAll('.fa-code-compare');
+  compareIcons.forEach((icon) => {
+    icon.addEventListener('click', () => {
+      icon.classList.toggle('added-to-compare');
+    });
+  });
+
 });
 
+let remove_compare = document.querySelectorAll('.col-compare .remove');
+if(remove_compare != null ){
+  remove_compare.forEach((btn)=>{
+    btn.addEventListener('click' , ()=>{
+      btn.parentElement.parentElement.remove();
+    });
+  });
+}
 ////////////////////////////////////////////////////////////////////////////////////
